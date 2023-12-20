@@ -1,15 +1,16 @@
 <style>
   body {
-    font-family: Verdana, sans-serif;
+    padding: 1em;
     margin: auto;
-    padding: 20px;
-    max-width: 720px;
+    line-height: 1.75;
+    font-size: 1em;
+    font-family: Consolas, monaco, monospace;
+    max-width: 72ch;
     text-align: left;
-    background-color: #fff;
+    background-color: #282a36;
+    color: #f8f8f2;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 1.5;
-    color: #444;
   }
 
   h1,
@@ -20,12 +21,12 @@
   h6,
   strong,
   b {
-    color: #222;
+    margin: 2rem 0 0.5rem;
+    color: #f1fa8c;
   }
 
   a {
-    color: #3273dc;
-    /*color: #ff5e6c;*/
+    color: #ff79c6;
   }
 
   .title {
@@ -64,7 +65,8 @@
 
   code {
     padding: 2px 5px;
-    background-color: #f2f2f2;
+    background-color: #44475a;
+    border-radius: 0.25rem;
   }
 
   pre code {
@@ -74,6 +76,11 @@
     white-space: pre-wrap;
     font-size: 14px;
     overflow-x: auto;
+  }
+
+  div.highlight {
+    border: solid 2px #222;
+    border-radius: 0.5rem;
   }
 
   div.highlight pre {
@@ -87,25 +94,36 @@
   }
 
   blockquote {
-    border-left: 1px solid #999;
-    color: #222;
-    padding-left: 20px;
+    padding: 0.5rem;
+    border-left: 0.25rem solid #ff5555;
     font-style: italic;
+    margin-inline-start: 0 !important;
+  }
+
+  td,
+  th {
+    border-bottom: 0 solid #6272a4;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  td:first-child {
+    border-right: 0.135rem solid #6272a4;
+  }
+
+  thead th {
+    border-bottom-width: 0.135rem;
   }
 
   footer {
+    color: #44475a;
+    font-size: 0.8rem;
     padding: 25px;
     text-align: center;
   }
 
-  .helptext {
-    color: #777;
-    font-size: small;
-  }
-
-  .errorlist {
-    color: #eba613;
-    font-size: small;
+  hr {
+    border: 1px dashed #6272a4;
   }
 
   /* blog posts */
@@ -124,50 +142,6 @@
 
   ul.blog-posts li a:visited {
     color: #8b6fcb;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #333;
-      color: #ddd;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    strong,
-    b {
-      color: #eee;
-    }
-
-    a {
-      color: #8cc2dd;
-    }
-
-    code {
-      background-color: #777;
-    }
-
-    pre code {
-      color: #ddd;
-    }
-
-    blockquote {
-      color: #ccc;
-    }
-
-    textarea,
-    input {
-      background-color: #252525;
-      color: #ddd;
-    }
-
-    .helptext {
-      color: #aaa;
-    }
   }
 
 </style>

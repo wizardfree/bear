@@ -1,3 +1,25 @@
 {{ define "main" }}
 {{ .Content }}
+
+<br>
+<b>Latest ramblings:</b>
+<ul class="blog-posts">
+{{ with .Site.GetPage "/blog" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.hidden" "!=" true))}}
+    <li>
+        <span>
+          <i>
+            <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+              {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+            </time>
+          </i>
+        </span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+{{ end }}
+</ul>
+
+<a href="mailto:josephsfleet@gmail.com">Get in Touch</a>
+
 {{ end }}
